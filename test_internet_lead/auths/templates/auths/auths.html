@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"crossorigin="anonymous">
+</head>
+
+<body style="background-color: #e9ecef;position: absolute;top: 50%;left: 50%;overflow: visible;">
+<div class="jumbotron" style="position: absolute;margin: auto;margin-right:-50px;top: 0;right: 0;bottom: 0;left: 0;width: 200px;height: 200px;font-size: 18px;text-align: center;">
+        <a class="btn btn-primary btn-lg" href="{% url 'social:begin' 'google-oauth2' %}">
+         <a class="btn btn-primary btn-lg" href="{% url 'social:begin' 'facebook' %}"></a>
+            Войти через
+            <img src="/static/images/icon-google.png"" alt="Google">
+        </a>
+{{request.user}}
+        {{ request.user.token }}
+    {% if messages %}
+    <div class="messages" style="width: 500px;margin-left: -150px;margin-top: 20px;">
+        {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
