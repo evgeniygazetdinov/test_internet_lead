@@ -16,7 +16,7 @@ def register(request):
             last_name = user_form.cleaned_data.get('last_name')
             email = user_form.cleaned_data.get('email')
             password = user_form.cleaned_data.get('password1')
-            new_user = CustomUser.objects.create(first_name=first_name, last_name = last_name, email=email, password=password)
+            new_user = CustomUser.objects.create(first_name=first_name, last_name = last_name, username = first_name+ last_name,email=email, password=password)
             new_user = user_form.save(commit=False)
             new_user.save()
             registered = True
