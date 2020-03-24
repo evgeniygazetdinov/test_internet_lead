@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from auths.models import CustomUser as User
+# Register your models here.
+admin.site.register(User)
 
 class UserCreateForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
@@ -37,4 +39,4 @@ class UserAdmin(UserAdmin):
 
 # Re-register UserAdmin
 admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
+admin.site.register(User, UserAdmin, )
