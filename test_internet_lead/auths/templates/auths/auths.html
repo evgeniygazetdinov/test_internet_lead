@@ -17,7 +17,6 @@
                 {{ user_form.as_p }}
                 <input type="submit" name="" value="Register">
               </form>
-        {{ request.user.token }}
     {% if messages %}
     <div class="messages" style="width: 500px;margin-left: -150px;margin-top: 20px;">
         {% for message in messages %}

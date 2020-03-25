@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 class CustomUser(User):
     def save(self, *args, **kwargs):
-            # do anything you need before saving
+            # do aenything you need before saving
             super(CustomUser, self).save(*args, **kwargs)
             # do anything you need after saving
 
     def __str__(self):
-        return self.user.username
+        return '1'
