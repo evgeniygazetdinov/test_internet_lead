@@ -126,7 +126,7 @@ USE_TZ = True
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -152,5 +152,6 @@ SOCIAL_AUTH_GOOGLE_PLUS_USE_DEPRECATED_API = True
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '36845020112-0ffrlh5p3ipbcksgr8midif2nc77dqev.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'IfeNKWqOeB38Ns-bKtvyRhUD'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '36845020112-0ffrlh5p3ipbcksgr8midif2nc77dqev.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'IfeNKWqOeB38Ns-bKtvyRhUD'
+SOCIAL_AUTH_FACEBOOK_KEY = '1132908380401026'
+SOCIAL_AUTH_FACEBOOK_SECRET = '3d2a6315c4487254c1d7700da799fee4'
+
