@@ -20,7 +20,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('login/', include('social_django.urls', namespace='social')),
-    path('accounts/login$', auth_views.LoginView.as_view(template_name='auths/auths.html'),name='login'),
+    path('accounts/login$', auth_views.LoginView.as_view(redirect_authenticated_user=True,template_name='auths/login.html'),name='login'),
     path('', register,name='reg'),
     
     path('home/', home, name="home"),
