@@ -41,3 +41,10 @@ def register(request):
 @login_required
 def home(request):
   return render(request, 'auths/home.html')
+
+
+
+
+#TODO FIX mechanics in redirect
+#FIX front end
+#and add union colors

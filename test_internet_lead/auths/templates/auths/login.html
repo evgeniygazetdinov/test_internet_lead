@@ -1,0 +1,19 @@
+{% extends 'auths/auths.html' %}
+{% block content %}
+{% include "auths/social.html"%}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="log">
+        <input type="submit" value="Login" />
+    </div>
+   
+  </form>
+  <form action="{% url 'reg' %}">
+    <div class="have-reg">
+        <p>no account?</p>
+    </div>    
+        <input type="submit" value="Registration" />
+   </form>
+{% endblock content%}

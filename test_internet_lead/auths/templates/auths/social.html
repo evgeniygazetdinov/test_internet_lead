@@ -1,0 +1,9 @@
+  {% load static %}
+  <div class="social-buttons">
+        <a class="btn btn-primary btn-lg" href="{% url 'social:begin' 'google-oauth2' %}">
+            <img src="{% static 'img/g.png' %}" alt="Google"> 
+        </a>
+        <a class="btn btn-primary btn-lg" href="{% url 'social:begin' 'facebook' %}">
+            <img src="{% static 'img/f.png' %}" alt="Facebook"> 
+        </a>
+    </div
